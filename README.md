@@ -108,13 +108,39 @@ Pre-configured emergency contacts (Fire, Medical, Security) allow one-click call
 crisislink/
 ├── src/
 │   ├── firebase/
+│   │   ├── config.js          # Firebase setup
+│   │   └── seed.js            # Demo data (optional)
 │   ├── context/
+│   │   ├── AuthContext.jsx    # Authentication logic
+│   │   └── HotelContext.jsx   # Active hotel state
 │   ├── utils/
+│   │   └── autoAssign.js      # Assignment + severity logic
+│   ├── hooks/
+│   │   └── useMassEmergency.js # Mass emergency detection
 │   ├── components/
+│   │   ├── dashboard/
+│   │   │   └── Layout.jsx
+│   │   └── emergencies/
+│   │       ├── EmergencyCard.jsx
+│   │       └── MassEmergencyModal.jsx
 │   ├── pages/
+│   │   ├── LoginPage.jsx
+│   │   ├── RegisterPage.jsx
+│   │   ├── DashboardPage.jsx
+│   │   ├── EmergencyDetailPage.jsx
+│   │   ├── PublicReportPage.jsx
+│   │   ├── StaffPage.jsx
+│   │   ├── LocationsPage.jsx
+│   │   ├── QRPage.jsx
+│   │   ├── HotelSetupPage.jsx
+│   │   └── ReportPage.jsx
 │   ├── App.jsx
-│   └── main.jsx
+│   ├── main.jsx
+│   └── index.css
+├── .env.example              # API keys (Gemini, Google Places)
 ├── firestore.rules
+├── firestore.indexes.json
+├── index.html
 ├── vite.config.js
 ├── tailwind.config.js
 └── package.json
